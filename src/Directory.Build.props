@@ -1,0 +1,38 @@
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<LangVersion>latest</LangVersion>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<TargetFramework>net10.0</TargetFramework>
+	</PropertyGroup>
+	<PropertyGroup>
+		<IsPackable>false</IsPackable>
+	</PropertyGroup>
+	<PropertyGroup>
+		<Version>$([System.DateTime]::Now.ToString(yyyy)).$([System.DateTime]::Now.ToString(MM)).$([System.DateTime]::Now.ToString(dd)).0</Version>
+		<FileVersion>$(Version)</FileVersion>
+		<InformationalVersion>$(GitVersion_InformationalVersion)</InformationalVersion>
+		<IsPackable Condition="'$(IsPackable)' == ''">false</IsPackable>
+	</PropertyGroup>
+	<!-- NuGet-Paket-Metadaten -->
+	<PropertyGroup>
+		<PackageId>$(ProjectName)</PackageId>
+		<Authors>Christian Hennerfeind</Authors>
+		<Company>BMW Group, Classing GmbH</Company>
+		<Product>BMW ADM Manufacturer API Client</Product>
+		<Copyright>Copyright © $([System.DateTime]::Now.ToString(yyyy)) BMW Group</Copyright>
+		<Description>Typisierter .NET-Client für die BMW ADM Manufacturer API (Article Data Manager), generiert mit Microsoft Kiota aus der OpenAPI-Spezifikation.</Description>
+		<PackageTags>Tvw</PackageTags>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<PackageDescription>Framework for Authentication Processes at BMW.</PackageDescription>
+		<RepositoryUrl>https://bmw.ghe.com/NuGet/BMW.Adm.git</RepositoryUrl>
+		<PackageProjectUrl>https://atc.bmwgroup.net/confluence/display/NUGET/BMW.Adm</PackageProjectUrl>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+	</PropertyGroup>
+</Project>

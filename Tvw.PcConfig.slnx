@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/Projektmappenelemente/">
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="src/Tvw.PcConfig/Tvw.PcConfig.csproj" />
+  <Project Path="src/Tvw.PcConfig.Gui/Tvw.PcConfig.Gui.csproj" />
+  <Project Path="src/Tvw.PcConfig.Tests/Tvw.PcConfig.Tests.csproj" />
+</Solution>
